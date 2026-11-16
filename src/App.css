@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --background: #050b13;
+  --surface: #0c1721;
+  --green: #18bd88;
+  --white: #f5f8f7;
+  --muted: #a2b0b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff12;
+  position: sticky;
+  top: 0;
+  background: #050b13ee;
+  backdrop-filter: blur(15px);
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.logo span {
+  color: var(--green);
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+}
+
+.logo small {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.nav-button,
+.whatapp-btn,
+.primary-button {
+  background: var(--green);
+  color: #04130e;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 80% 40%, #123d3040, transparent 45%),
+    linear-gradient(120deg, #050b13, #0b1b21);
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: var(--green);
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.12;
+  margin: 25px 0;
+}
+
+.hero h1 span,
+.intro h2 span {
+  color: var(--green);
+}
+
+.hero-content p,
+.section > p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.secondary-button {
+  border: 1px solid #ffffff40;
+  padding: 14px 22px;
+  border-radius: 6px;
+}
+
+.secondary-button:hover {
+  border-color: var(--green);
+}
+
+.hero-note {
+  position: absolute;
+  bottom: 35px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.green-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-right: 8px;
+}
+
+.section {
+  padding: 100px 8%;
+}
+
+.section h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  margin: 18px 0;
+}
+
+.intro {
+  background: var(--surface);
+}
+
+.intro p {
+  max-width: 750px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.work-card {
+  background: var(--surface);
+  border: 1px solid #ffffff12;
+  border-radius: 12px;
+  padding: 35px;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+}
+
+.work-card > span {
+  color: var(--green);
+  font-size: 14px;
+}
+
+.work-card h3 {
+  margin: 25px 0 12px;
+  font-size: 21px;
+}
+
+.work-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.involved {
+  background: linear-gradient(120deg, #102d25, #0c1721);
+}
+
+.involved p {
+  margin-bottom: 30px;
+}
+
+.contact {
+  background: var(--surface);
+}
+
+.contact-form {
+  max-width: 600px;
+  display: grid;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 17px;
+  background: var(--background);
+  color: white;
+  border: 1px solid #ffffff25;
+  border-radius: 6px;
+  font: inherit;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--green);
+}
+
+.contact-form button {
+  justify-self: start;
+}
+.btns {
+  display: flex;
+  gap: 20px;
+}
+footer {
+  padding: 55px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+footer p,
+footer > small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 6%;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 25px 6%;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btns {
+    flex-direction: column;
+  }
+  .whatapp-btn{
+    text-align: center;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 600px;
+    padding: 90px 6%;
+  }
+
+  .section {
+    padding: 75px 6%;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 45px 6%;
+  }
+}
